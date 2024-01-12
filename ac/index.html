@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<style>
+			.a{
+				border: 1px solid #00aaff;
+				height: 200px;
+				width: 200px;
+				float: left;
+				margin: 10px;
+			}
+			.b{
+				border: 1px solid #ff5500;
+				height: 200px;
+				width: 200px;
+				float: left;
+				margin: 10px;
+			}
+			.c{
+				border: 1px solid #00ff7f;
+				height: 200px;
+				width: 200px;
+				float: left;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="a">11</div>
+			<div class="a" name="a">12</div>
+			<div class="a">13</div>
+		</div>
+		<div style="margin-top: 30px;left: 20px;">
+			<div class="b">21</div>
+			<div class="b" name="a">22</div>
+			<div class="b">23</div>
+		</div>
+		<div>
+		<div class="c">31</div>
+		<div class="c">32</div>
+		<div class="c" id="a">33</div>
+		</div>
+		<p class="a" name=a>qwertyuiop</p>
+		<p class="b">asdfghjkl</p>
+		<input type="button" value="改变a的背景色" onclick="aa()"/><br />
+		<input type="button" value="改变偶数的背景色" onclick="bb()"/><br />
+		<input type="button" value="改变标签的背景色" onclick="cc()"/><br />
+		<input type="button" value="改变id=a的背景色" onclick="dd()"/><br />
+		<input type="button" value="改变奇数的背景色" onclick="ee()"/><br />
+		<input type="button" value="改变name=a的背景色" onclick="ff()"/><br />
+		<input type="button" value="改变name=a的背景色" onclick="gg()"/>
+	</body>
+</html>
+<script>
+	function aa(){
+		$(".a").css("background-color","#00aaff");//class=a
+	}
+	function bb(){
+		$("div:even").css("background-color","#00ff00");//标签:偶数项
+	}
+	function cc(){
+		$("div").css("background-color","#ffff00");//标签
+	}
+	function dd(){
+		$("#a").css("background-color","#ff5500");//id=a
+	}
+	function ee(){
+		$("div:odd").css("background-color","#aaaaff");//标签:奇数项
+	}
+	function ff(){
+		$("div[name=a]").css("background-color","#55ffff");//标签[属性] name=a的div
+	}
+	function gg(){
+		$("*[name=a]").css("background-color","#aa0000");//所有name=a   *=所有
+	}
+</script>
